@@ -1,0 +1,142 @@
+/*abaixo está o estilo do header*/
+
+/* styles/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Main:wght@400;700&display=swap');
+
+
+.cabecalho {
+   font-family: 'Main', sans-serif;
+
+    background-color: #EBBA83;
+    padding: 20px;
+  }
+
+  .cabecalho a:link, .cabecalho a:visited {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+  
+.cabecalho a:hover {
+    color: rgb(123, 60, 39);
+}
+
+  
+  .logo {
+    padding-right: 10px;
+    width: 50px;
+    height: 50px;
+  }
+  
+
+  .nav {
+    display: flex;
+    justify-content: space-between; /* Distribui os elementos horizontalmente */
+    align-items: center;
+  }
+  
+ 
+  .nav a {
+    margin-right: 20px; 
+  }
+  
+
+  .adicionarProduto,
+  .carrinho {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .mensagem {
+    text-align: center; 
+    margin-top: 20px; 
+    font-size: 18px;
+    text-align: center; 
+    flex-grow: 1; /* Permite que a mensagem ocupe o espaço restante */
+    margin: 0;
+  }
+  
+  
+  .adicionarProduto {
+    background-color: #5dc95d;
+    border: none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    justify-content: end;
+    display: flex;
+  }
+  
+ 
+  .adicionarProduto:hover {
+    background-color: #28A428; 
+  }
+  /*//////////// acima está o css do header////////////////*/
+
+
+  /*//////////// abaixo está o css dos cards////////////////*/
+  .main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px; 
+    padding: 1cm;
+    
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    padding: 1cm;
+    width: 30%;
+    height: auto;
+    border-radius: 24px;
+    background-color: #EBE2D2;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+/*//////////// acima está o css dos cards////////////////*/
+
+/*//////////// abaixo está o css do footer////////////////*/
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333333;
+    color:white;
+    width: auto;
+    height: 150px;
+    justify-content: space-between; 
+    
+    
+  }
+
+  .footer a{
+    color: white;
+  }
+
+  .footer p{
+    text-align: center;
+    justify-content: center;
+  }
+ 
+ .logoFooter img{
+    justify-content: end;
+    padding-right: 10px;
+    width: 100px;
+    height: 100px;
+  }
+
+ 
+/*//////////// acima está o css do footer////////////////*/
+
+.notFound{
+  text-align: center;
+}

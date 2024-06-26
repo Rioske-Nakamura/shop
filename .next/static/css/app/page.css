@@ -1,0 +1,145 @@
+/*!******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/componentes/css.module.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************/
+/*abaixo está o estilo do header*/
+
+/* styles/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Main:wght@400;700&display=swap');
+
+
+.css_cabecalho__YURxA {
+   font-family: 'Main', sans-serif;
+
+    background-color: #EBBA83;
+    padding: 20px;
+  }
+
+  .css_cabecalho__YURxA a:link, .css_cabecalho__YURxA a:visited {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+  
+.css_cabecalho__YURxA a:hover {
+    color: rgb(123, 60, 39);
+}
+
+  
+  .css_logo__JsLRU {
+    padding-right: 10px;
+    width: 50px;
+    height: 50px;
+  }
+  
+
+  .css_nav__PVcDG {
+    display: flex;
+    justify-content: space-between; /* Distribui os elementos horizontalmente */
+    align-items: center;
+  }
+  
+ 
+  .css_nav__PVcDG a {
+    margin-right: 20px; 
+  }
+  
+
+  .css_adicionarProduto___bHIH,
+  .css_carrinho__2Q1N6 {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .css_mensagem__tTEIi {
+    text-align: center; 
+    margin-top: 20px; 
+    font-size: 18px;
+    text-align: center; 
+    flex-grow: 1; /* Permite que a mensagem ocupe o espaço restante */
+    margin: 0;
+  }
+  
+  
+  .css_adicionarProduto___bHIH {
+    background-color: #5dc95d;
+    border: none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    justify-content: end;
+    display: flex;
+  }
+  
+ 
+  .css_adicionarProduto___bHIH:hover {
+    background-color: #28A428; 
+  }
+  /*//////////// acima está o css do header////////////////*/
+
+
+  /*//////////// abaixo está o css dos cards////////////////*/
+  .css_main__2jQIh{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px; 
+    padding: 1cm;
+    
+}
+.css_card__lIYBe{
+    display: flex;
+    flex-direction: column;
+    padding: 1cm;
+    width: 30%;
+    height: auto;
+    border-radius: 24px;
+    background-color: #EBE2D2;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+/*//////////// acima está o css dos cards////////////////*/
+
+/*//////////// abaixo está o css do footer////////////////*/
+
+.css_footer__XDxDf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333333;
+    color:white;
+    width: auto;
+    height: 150px;
+    justify-content: space-between; 
+    
+    
+  }
+
+  .css_footer__XDxDf a{
+    color: white;
+  }
+
+  .css_footer__XDxDf p{
+    text-align: center;
+    justify-content: center;
+  }
+ 
+ .css_logoFooter__zlXKr img{
+    justify-content: end;
+    padding-right: 10px;
+    width: 100px;
+    height: 100px;
+  }
+
+ 
+/*//////////// acima está o css do footer////////////////*/
+
+.css_notFound__E5BLB{
+  text-align: center;
+}
