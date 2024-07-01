@@ -4,7 +4,7 @@ export default function Spinner() {
     return (
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
             <Image
-                src="/loading.svg"
+                src="/progress.gif"
                 alt="imagem carregando"
                 width={100}
                 height={100}

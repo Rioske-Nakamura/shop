@@ -42,6 +42,10 @@ export default function Main() {
     const newList = [...listProduct].sort((a, b) => b.price - a.price);
     setListProduct(newList);
   };
+  const filterProducts = (searchTerm) => {
+    const filteredList = products.filter((product) => product.title.toLowerCase().includes(searchTerm.toLowerCase()));
+    setListProduct(filteredList);
+  };
   
   if (errorFetch == true) {
     return <ErrorGetData/>
@@ -56,9 +60,10 @@ export default function Main() {
 
 
 
+
   return (
     <main className={styles.main}>
-      <input type="text" placeholder="Pesquisar..." onChange={(e) => setSearch(e.target.value)} />
+      <input type="text" placeholder="Pesquisar..." onChange={(e) => {setSearch(e.target.value), filterProducts(e.target.value)} } />
       <button onClick={orderAz}>Ordenar A-Z</button>
       <button onClick={orderP}>Ordenar Preço Menor - Maior</button>
       <button onClick={orderPr}>Ordenar Preço Maior - Menor</button> <br></br>
