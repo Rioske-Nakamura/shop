@@ -7,18 +7,19 @@ import Spinner from "./Spinner";
 import ErrorGetData from "./ErrrorGetData";
 
 export default function Main() {
-  const [products, setProducts] = useState([]);
+
   const [listProduct, setListProduct] = useState([]);
   const [search, setSearch] = useState("");
   const [errorFetch, setErrorFetch] = useState(false);
 
 
   useEffect(() => {
+
+   
     const getProduct = async () => {
         try {
       const response = await fetch("https://fakestoreapi.com/products/");
       const data = await response.json();
-      setProducts(data);
       setListProduct(data);
         }catch {
           setErrorFetch(true);
@@ -42,14 +43,12 @@ export default function Main() {
     const newList = [...listProduct].sort((a, b) => b.price - a.price);
     setListProduct(newList);
   };
-  const filterProducts = (searchTerm) => {
-    const filteredList = products.filter((product) => product.title.toLowerCase().includes(searchTerm.toLowerCase()));
-    setListProduct(filteredList);
-  };
+ 
   
   if (errorFetch == true) {
     return <ErrorGetData/>
   }
+  
   if(listProduct[0] == null){
       return(
       <main>
@@ -58,12 +57,21 @@ export default function Main() {
         )
   }
 
-
+  useEffect(() => {
+    if (search === "") {
+      getProduct();
+    } else {
+      const filteredList = listProduct.filter((product) =>
+        product.title.toLowerCase().includes(search.toLowerCase())
+      );
+      setListProduct(filteredList);
+    }
+  }, [search]);
 
 
   return (
     <main className={styles.main}>
-      <input type="text" placeholder="Pesquisar..." onChange={(e) => {setSearch(e.target.value), filterProducts(e.target.value)} } />
+      <input type="text" placeholder="Pesquisar..." onChange={(e) => {setSearch(e.target.value)} } />
       <button onClick={orderAz}>Ordenar A-Z</button>
       <button onClick={orderP}>Ordenar Preço Menor - Maior</button>
       <button onClick={orderPr}>Ordenar Preço Maior - Menor</button> <br></br>
